@@ -199,7 +199,7 @@ class MqttClient extends EventEmitter {
     }
 
 
-    var options={retain:true,qos:0};
+    let options={retain:true,qos:0};
 
     this.client.publish(
       getStateTopic(device),
