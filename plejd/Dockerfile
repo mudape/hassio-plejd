@@ -63,7 +63,7 @@ LABEL \
   io.hass.version=${BUILD_VERSION} \
   maintainer="Marcus Westin <marcus@sekurbit.se>" \
   org.opencontainers.image.description="Support for Plejd devices." \
-  org.opencontainers.image.source="https://github.com/icanos/hassio-plejd"
+  org.opencontainers.image.source="https://github.com/icanos/hassio-plejd" \
   org.opencontainers.image.documentation="https://github.com/icanos/hassio-plejd/tree/master/README.md" \
   org.opencontainers.image.created=${BUILD_DATE} \
   org.opencontainers.image.revision=${BUILD_REF} \
