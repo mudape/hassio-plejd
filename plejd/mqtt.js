@@ -186,7 +186,6 @@ class MqttClient extends EventEmitter {
         payload = {
           state: data.state === 1 ? 'ON' : 'OFF',
           brightness: data.brightness,
-          retain: true
         }
       }
       else {
@@ -201,7 +200,7 @@ class MqttClient extends EventEmitter {
 
     this.client.publish(
       getStateTopic(device),
-      payload
+      payload,retain=true
     );
   }
 

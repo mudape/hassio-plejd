@@ -1,7 +1,7 @@
 {
   "name": "Plejd Fork",
-  "version": "0.4.6",
-  "slug": "plejd",
+  "version": "0.5.0",
+  "slug": "plejdfork",
   "description": "Support for devices from Plejd.",
   "url": "https://github.com/mudape/hassio-plejd/",
   "arch": [
