@@ -1,9 +1,9 @@
 {
-  "name": "Plejd",
+  "name": "Plejd Fork",
   "version": "0.4.6",
   "slug": "plejd",
-  "description": "Adds support for the Swedish home automation devices from Plejd.",
-  "url": "https://github.com/icanos/hassio-plejd/",
+  "description": "Support for devices from Plejd.",
+  "url": "https://github.com/mudape/hassio-plejd/",
   "arch": [
     "armhf",
     "armv7",

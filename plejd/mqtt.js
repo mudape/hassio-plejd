@@ -39,7 +39,7 @@ const getDiscoveryPayload = device => ({
   state_topic: getStateTopic(device),
   command_topic: getCommandTopic(device),
   optimistic: false,
-  brightness: `${device.dimmable}`,
+  brightness: device.dimmable,
   device: {
     identifiers: device.serialNumber + '_' + device.id,
     manufacturer: 'Plejd',
@@ -185,12 +185,14 @@ class MqttClient extends EventEmitter {
       if (device.dimmable) {
         payload = {
           state: data.state === 1 ? 'ON' : 'OFF',
-          brightness: data.brightness
+          brightness: data.brightness,
+          retain: true
         }
       }
       else {
         payload = {
-          state: data.state === 1 ? 'ON' : 'OFF'
+          state: data.state === 1 ? 'ON' : 'OFF',
+          retain: true
         }
       }
 
