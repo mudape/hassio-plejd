@@ -198,9 +198,12 @@ class MqttClient extends EventEmitter {
       payload = JSON.stringify(payload);
     }
 
+
+    var options={retain:true};
+
     this.client.publish(
       getStateTopic(device),
-      payload,retain=true
+      payload,options
     );
   }
 
