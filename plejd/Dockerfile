@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:5.2.0
+ARG BUILD_FROM=hassioaddons/base:5.0.2
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
@@ -19,7 +19,7 @@ COPY ./scene.manager.js /plejd/
 ARG BUILD_ARCH
 
 # Install Node
-# RUN apk add --no-cache jq
+RUN apk add --no-cache jq
 RUN \
   apk add --no-cache --virtual .build-dependencies \
   g++=8.3.0-r0 \
@@ -66,8 +66,7 @@ LABEL \
   org.label-schema.build-date=${BUILD_DATE} \
   org.label-schema.name="Plejd" \
   org.label-schema.schema-version="1.0" \
-  org.label-schema.usage="https://github.com/mudape/hassio-plejd/tree/master/README.md" \
+  org.label-schema.usage="https://github.com/mudape/hassio-plejd/README.md" \
   org.label-schema.vcs-ref=${BUILD_REF} \
-  org.label-schema.vcs-url="https://github.com/mudape/hassio-plejd" \
-  org.label-schema.vendor="Tillverkare" 
-
+  org.label-schema.vcs-url="https://github.com/mudape/hassio-plejd"
+  
