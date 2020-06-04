@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:7.2.0
+ARG BUILD_FROM=hassioaddons/base:5.2.0
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
