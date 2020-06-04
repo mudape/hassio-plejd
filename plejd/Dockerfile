@@ -19,7 +19,7 @@ COPY ./scene.manager.js /plejd/
 ARG BUILD_ARCH
 
 # Install Node
-RUN apk add --no-cache jq
+# RUN apk add --no-cache jq
 RUN \
   apk add --no-cache --virtual .build-dependencies \
   g++=8.3.0-r0 \
@@ -62,12 +62,6 @@ LABEL \
   io.hass.type="addon" \
   io.hass.version=${BUILD_VERSION} \
   maintainer="Marcus Westin <marcus@sekurbit.se>" \
-  # org.opencontainers.image.description="Support for Plejd devices." \
-  # org.opencontainers.image.source="https://github.com/mudape/hassio-plejd" \
-  # org.opencontainers.image.documentation="https://github.com/mudape/hassio-plejd/tree/master/README.md" \
-  # org.opencontainers.image.created=${BUILD_DATE} \
-  # org.opencontainers.image.revision=${BUILD_REF} \
-  # org.opencontainers.image.version=${BUILD_VERSION}
   org.label-schema.description="Adds support for the Swedish home automation devices from Plejd." \
   org.label-schema.build-date=${BUILD_DATE} \
   org.label-schema.name="Plejd" \
@@ -75,4 +69,5 @@ LABEL \
   org.label-schema.usage="https://github.com/mudape/hassio-plejd/tree/master/README.md" \
   org.label-schema.vcs-ref=${BUILD_REF} \
   org.label-schema.vcs-url="https://github.com/mudape/hassio-plejd"
-  
+  org.label-schema.vendor="Tillverkare" 
+
